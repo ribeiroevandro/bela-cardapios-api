@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "8.3.1",
+    "@flydotio/dockerfile": "latest",
     "@rocketseat/eslint-config": "2.1.0",
     "@types/pg": "8.10.9",
     "@types/react": "^18.2.39",
