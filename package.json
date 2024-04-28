@@ -1,7 +1,8 @@
 {
   "name": "menuapi",
   "version": "1.0.0",
-  "main": "src/http/server.ts",
+  "type": "module",
+  "module": "src/http/server.ts",
   "scripts": {
     "generate": "drizzle-kit generate:pg",
     "dev": "bun --watch src/http/server.ts",
