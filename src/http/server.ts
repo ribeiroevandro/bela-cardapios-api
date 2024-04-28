@@ -75,7 +75,9 @@ const app = new Elysia()
   .use(getPopularProducts)
   .use(getProducts)
 
-app.listen(3333)
+const port = process.env.PORT || 3333
+
+app.listen(port)
 
 console.log(
   `🔥 HTTP server running at ${app.server?.hostname}:${app.server?.port}`,
