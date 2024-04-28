@@ -1,6 +1,5 @@
 {
   "name": "menuapi",
-  "type": "module",
   "version": "1.0.0",
   "module": "src/http/server.js",
   "scripts": {
@@ -10,8 +9,6 @@
     "seed": "bun src/db/seed.ts",
     "start": "NODE_ENV=production && bunx run migrate && bun src/http/server.ts"
   },
-  "author": "Diego Fernandes <diego.schell.f@gmail.com>",
-  "license": "MIT",
   "dependencies": {
     "@elysiajs/cookie": "^0.7.0",
     "@elysiajs/cors": "^0.7.2",
