@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for bela-cardapios-api on 2024-02-12T20:04:58-03:00
+# fly.toml app configuration file generated for belacardapios-api on 2024-04-28T14:18:17-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'bela-cardapios-api'
-primary_region = 'gig'
+app = 'belacardapios-api'
+primary_region = 'gru'
 
 [build]
 
@@ -17,6 +17,6 @@ primary_region = 'gig'
   processes = ['app']
 
 [[vm]]
+  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
