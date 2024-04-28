@@ -3,6 +3,7 @@ import { cors } from '@elysiajs/cors'
 
 import { registerRestaurant } from './routes/register-restaurant'
 import { registerCustomer } from './routes/register-customer'
+import { registerProduct } from './routes/register-product'
 import { sendAuthenticationLink } from './routes/send-authentication-link'
 import { createOrder } from './routes/create-order'
 import { approveOrder } from './routes/approve-order'
@@ -26,6 +27,7 @@ import { getDailyReceiptInPeriod } from './routes/get-daily-receipt-in-period'
 import { getPopularProducts } from './routes/get-popular-products'
 import { dispatchOrder } from './routes/dispatch-order'
 import { deliverOrder } from './routes/deliver-order'
+import { getProducts } from './routes/get-products'
 
 const app = new Elysia()
   .use(
@@ -44,12 +46,14 @@ const app = new Elysia()
       },
     }),
   )
+  .get('/', () => 'server running 🚀')
   .use(authentication)
   .use(signOut)
   .use(getProfile)
   .use(getManagedRestaurant)
   .use(registerRestaurant)
   .use(registerCustomer)
+  .use(registerProduct)
   .use(sendAuthenticationLink)
   .use(authenticateFromLink)
   .use(createOrder)
@@ -69,6 +73,7 @@ const app = new Elysia()
   .use(getMonthCanceledOrdersAmount)
   .use(getDailyReceiptInPeriod)
   .use(getPopularProducts)
+  .use(getProducts)
 
 app.listen(3333)
 

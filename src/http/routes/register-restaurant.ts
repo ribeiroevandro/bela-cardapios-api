@@ -17,10 +17,15 @@ export const registerRestaurant = new Elysia().post(
       })
       .returning()
 
-    await db.insert(restaurants).values({
-      name: restaurantName,
-      managerId: manager.id,
-    })
+    const [teste] = await db
+      .insert(restaurants)
+      .values({
+        name: restaurantName,
+        managerId: manager.id,
+      })
+      .returning()
+
+    console.log(teste)
 
     set.status = 204
   },
