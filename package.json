@@ -7,7 +7,7 @@
     "dev": "bun --watch src/http/server.ts",
     "migrate": "bun src/db/migrate.ts",
     "seed": "bun src/db/seed.ts",
-    "start": "NODE_ENV=production && bunx run migrate && bun src/http/server.ts"
+    "start": "NODE_ENV=production bun src/http/server.ts"
   },
   "dependencies": {
     "@elysiajs/cookie": "^0.7.0",
