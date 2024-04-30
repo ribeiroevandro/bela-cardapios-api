@@ -1,14 +1,14 @@
 {
-  "name": "menuapi",
+  "name": "belacardapios-api",
   "version": "1.0.0",
   "type": "module",
-  "module": "src/http/server.ts",
+  "module": "src/index.ts",
   "scripts": {
     "generate": "drizzle-kit generate:pg",
-    "dev": "bun --watch src/http/server.ts",
+    "dev": "bun --watch index.ts",
     "migrate": "bun src/db/migrate.ts",
     "seed": "bun src/db/seed.ts",
-    "start": "NODE_ENV=production bun src/http/server.ts"
+    "start": "NODE_ENV=production bun index.ts"
   },
   "dependencies": {
     "@elysiajs/cookie": "^0.7.0",
