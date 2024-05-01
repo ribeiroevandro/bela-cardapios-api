@@ -4,6 +4,7 @@
   "scripts": {
     "generate": "drizzle-kit generate:pg",
     "dev": "bun --watch src/http/server.ts",
+    "dev:email": "email dev -d src/mail/templates",
     "migrate": "bun src/db/migrate.ts",
     "seed": "bun src/db/seed.ts",
     "start": "NODE_ENV=production bun src/http/server.ts"
@@ -20,6 +21,7 @@
     "elysia": "0.7.29",
     "postgres": "3.4.3",
     "react": "^18.2.0",
+    "react-email": "2.1.2",
     "resend": "^2.0.0",
     "zod": "3.22.4"
   },

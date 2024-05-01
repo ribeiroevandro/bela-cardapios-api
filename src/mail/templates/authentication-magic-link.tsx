@@ -18,8 +18,8 @@ interface AuthenticationMagicLinkTemplateProps {
   authLink: string
 }
 
-export function AuthenticationMagicLinkTemplate({
-  userEmail,
+export default function AuthenticationMagicLinkTemplate({
+  userEmail = 'ribeiroevandro@live.com',
   authLink,
 }: AuthenticationMagicLinkTemplateProps) {
   const previewText = `Faça login na Bela Cardáios`
@@ -32,18 +32,19 @@ export function AuthenticationMagicLinkTemplate({
         <Body className="bg-white my-auto mx-auto font-sans">
           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
             <Section className="mt-[32px] text-center">
-              <span className="text-2xl">🍕</span>
+              <span className="text-7xl">🍕</span>
             </Section>
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
-              Faça login na Pizza Shop
+              Faça login na Bela Cardápios
             </Heading>
             <Text className="text-black text-[14px] leading-[24px]">
-              Você solicitou um link para login na Pizza Shop através do email{' '}
-              {userEmail}.
+              Você solicitou um link para login na <b> Bela Cardápios</b>{' '}
+              através do email{' '}
+              <span className="font-bold underline">{userEmail}</span>.
             </Text>
             <Section className="text-center mt-[32px] mb-[32px]">
               <Button
-                className="bg-sky-500 rounded text-white px-5 py-3 text-[12px] font-semibold no-underline text-center"
+                className="bg-red-700 rounded text-white px-5 py-3 text-[12px] font-semibold no-underline text-center"
                 href={authLink}
               >
                 Entrar agora
