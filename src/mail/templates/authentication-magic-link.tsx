@@ -19,7 +19,7 @@ interface AuthenticationMagicLinkTemplateProps {
 }
 
 export default function AuthenticationMagicLinkTemplate({
-  userEmail = 'ribeiroevandro@live.com',
+  userEmail,
   authLink,
 }: AuthenticationMagicLinkTemplateProps) {
   const previewText = `Faça login na Bela Cardáios`
