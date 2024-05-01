@@ -36,15 +36,17 @@ export const sendAuthenticationLink = new Elysia().post(
     // console.log(authLink.href)
     //
     // return authLink.href
-    await resend.emails.send({
-      from: 'Bela Cardápios <ribeiroevandro+resend@live.com>',
-      to: email,
-      subject: '[Bela Cardápio] Link para login',
-      react: AuthenticationMagicLinkTemplate({
-        userEmail: email,
-        authLink: authLink.toString(),
-      }),
-    })
+    console.log('email', email)
+
+    // await resend.emails.send({
+    //   from: 'Bela Cardápios <ribeiroevandro+resend@live.com>',
+    //   to: email,
+    //   subject: '[Bela Cardápio] Link para login',
+    //   react: AuthenticationMagicLinkTemplate({
+    //     userEmail: email,
+    //     authLink: authLink.toString(),
+    //   }),
+    // })
   },
   {
     body: t.Object({
